@@ -8,13 +8,7 @@ android {
         targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
         versionCode rootProject.ext.VERSION_CODE
         versionName rootProject.ext.VERSION_NAME
-
         vectorDrawables.useSupportLibrary = true
-
-        ndk {
-            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
-            abiFilters "armeabi-v7a"
-        }
     }
 
     lintOptions {
@@ -23,12 +17,6 @@ android {
     }
 
     useLibrary 'org.apache.http.legacy'
-
-    sourceSets{
-        main{
-            jniLibs.srcDir 'libs'
-        }
-    }
 
     buildTypes {
         release {
